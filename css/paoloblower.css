@@ -1,0 +1,16 @@
+a.navbar-brand {
+  min-height:50px;
+  width:300px;
+  background-size:160px 80px;
+  background-position:0px -35px;
+  background-repeat:no-repeat;
+  /*background-image:url('../img/logos/title.png');*/
+}
+/* .cbp-af-header-shrink is the class
+used by the navbar when it turns white;
+let's just overload it with this declaration
+as well */
+.cbp-af-header-shrink a.navbar-brand {
+  background-image:url('../img/logos/title.png');
+  background-position:0px 5px;
+}

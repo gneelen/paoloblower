@@ -14,3 +14,23 @@ as well */
   background-image:url('../img/logos/title.png');
   background-position:0px 5px;
 }
+
+
+section#mills {
+  background-image:none;
+  margin-top:4em;
+  margin-bottom:4em;
+  padding:0;
+}
+section#mills .page-header {
+  margin-top:4em;
+}
+.carousel-inner .item {
+  min-height:550px;
+}
+
+.carousel-inner .item h1,
+.carousel-inner .item h2,
+.carousel-inner .item .carousel-caption {
+  color:black !important;
+}

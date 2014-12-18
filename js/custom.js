@@ -7,7 +7,6 @@ $(window).load(function(){
 
 $(document).ready(function() {
   fullScreenContainer();
-  owlCarousel();
 });
 
 
@@ -52,29 +51,6 @@ function fullScreenContainer() {
   });
 
 }
-
-
-
-/* --- owlCarousel ------------- */
-
-function owlCarousel() {
-    var config = {
-      lazyLoad: true,
-      lazyEffect: "fade",
-      singleItem: true,
-      navigation: false,
-      slideSpeed : 450,
-      pagination: false,
-      transitionStyle: "fade",
-      theme: "owl-theme-featured"
-    };
-
-    console.log('config', config);
-
-    $("#intro").owlCarousel(config);
-}
-
-
 
 /* --- Tooltips ------------------- */
 

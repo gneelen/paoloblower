@@ -47,6 +47,12 @@ div#intro a {
   font-size:2em;
 }
 
+.title {
+  position:absolute;
+  left:25%;
+  top:10%;
+}
+
 .logo {
   background-color:rgba(0,0,0,0.3);
   background-image:url('../img/logos/full-white.png');
@@ -58,10 +64,6 @@ div#intro a {
   margin: 0 auto;
   margin-top:100px;
   margin-bottom:50px;
-
-  position:absolute;
-  top:10%;
-  left:30%;
 }
 
 video#bgvid {

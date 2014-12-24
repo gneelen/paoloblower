@@ -60,8 +60,8 @@
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav pull-right">
                 <li><a href="#about">About</a></li>
-                <li><a href="#ials">ials</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#mills">Mills</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <!--<li class="hidden-sm"><a href="#team">Team</a></li>-->
                 <li><a href="#contact">Contact</a></li>
               </ul>
@@ -75,9 +75,18 @@
 
     <!-- Hero Banner
     ================================================== -->
-    <div id="intro" style="background-image: url( 'img/bg-videofallback.jpg' ); background-repeat: no-repeat; background-size: cover; background-position: center center;filter:url(filters.svg#grayscale);-webkit-filter:grayscale(50%);">
+    <div id="intro"> <!-- style="background-image: url( 'img/bg-videofallback.jpg' ); background-repeat: no-repeat; background-size: cover; background-position: center center;filter:url(filters.svg#grayscale);-webkit-filter:grayscale(50%);"> -->
+
+
+
       <div class="container">
+
         <div class="row">
+          <video autoplay muted loop id="bgvid">
+            <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+            <source src="//f.cl.ly/items/3S3t0F26272L0M330X3u/looms.mp4" type="video/mp4">
+          </video>
+
           <div class="logo">
 
           </div>
@@ -97,11 +106,29 @@
         <!-- Three columns of text below the carousel -->
         <div class="row">
           <div class="col-lg-12 overlay-text">
-            <h2>We always deliver more than expected</h2>
+            <h2>Our Story</h2>
           </div><!-- /.col-lg-12 -->
         </div><!-- /.row -->
 
         <div class="row">
+          <div class="col-lg-6">
+            <p>Founded in 1982, Paolo Blower International Textile Workshop quickly established itself as an industry
+              pioneer that offered Italian quality fabrics to the American contemporary and newly-born bridge
+              markets. Over three decades our firm has expanded its selection to include fabrics from many other
+              countries, thereby adjusting to market changes, economic downturns, and most current client needs.
+              One thing is certain: we have never lost sight of our original vision to bring innovation, quality,
+              undisputed style, and superior customer service to both our customers and suppliers. Today, our team
+              of young dynamic professionals and seasoned management still operates from our historical offices in
+              midtown Manhattan and Prato, Italy, where we constantly monitor new sources, detect latest fashion
+              trends and maintain the global perspective that keeps Paolo Blower a most reputable and inspiring
+              leader in the marketplace.</p>
+          </div>
+          <div class="col-lg-6">
+            <img src="img/drafting-in-office.png" width="450px">
+          </div>
+        </div>
+
+        <!-- <div class="row">
           <div class="col-sm-4 text-center overlay-text icons">
             <div class="icon-wrapper">
               <i class="fa fa-cloud icon-large"></i>
@@ -125,8 +152,6 @@
           </div>
         </div><!-- /.row -->
       </div>
-
-      <div class="overlay-bg light"></div>
 
     </section>
 

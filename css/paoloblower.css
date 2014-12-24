@@ -1,3 +1,6 @@
+svg {
+  display:none;
+}
 a.navbar-brand {
   min-height:50px;
   width:300px;
@@ -14,7 +17,6 @@ as well */
   background-image:url('../img/logos/title.png');
   background-position:0px 5px;
 }
-
 
 section#mills {
   background-image:none;
@@ -33,4 +35,27 @@ section#mills .page-header {
 .carousel-inner .item h2,
 .carousel-inner .item .carousel-caption {
   color:black !important;
+}
+
+div#intro {
+  text-align:center;
+  color:white;
+}
+
+div#intro a {
+  border-radius:2px;
+  font-size:2em;
+}
+
+.logo {
+  background-color:rgba(0,0,0,0.3);
+  background-image:url('../img/logos/full-white.png');
+  background-size:100% auto;
+  background-repeat:no-repeat;
+  min-height:200px;
+  width:500px;
+
+  margin: 0 auto;
+  margin-top:100px;
+  margin-bottom:50px;
 }

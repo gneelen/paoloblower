@@ -28,6 +28,8 @@ section#mills .page-header {
   margin-top:4em;
 }
 .carousel-inner .item {
+  background-repeat:no-repeat;
+  background-size:cover;
   min-height:550px;
 }
 

@@ -45,7 +45,7 @@ as well */
 
 .btn-primary{
 	background-color:rgb(40,40,40);
-  padding:0.5em 2em;
+  padding:.7em 2.1em;
   font-size:1.5em;
 }
 
@@ -91,24 +91,27 @@ div#intro a {
   background-image:url('../img/logos/full-white.png');
   background-size:100% auto;
   background-repeat:no-repeat;
+  background-position-y:50%;
   min-height:240px;
   width:500px;
 
   margin: 0 auto;
   margin-top:100px;
-  margin-bottom:50px;
 }
 
-
+.title p {
+  margin-top:2.5em;
+  margin-bottom:2.5em;
+}
 
 video#bgvid {
   margin-left:-55px;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
+  right:0;
+  bottom:0;
+  min-width:100%;
+  min-height:100%;
+  width:auto;
+  height:auto;
+  z-index:-100;
   -webkit-filter:grayscale(100%);
 }

@@ -1,6 +1,31 @@
 svg {
   display:none;
 }
+
+/* accent colors */
+.btn-primary:hover,
+button.btn.contact-button {
+  border:none;
+  background-color:olive;
+}
+
+button.btn.contact-button:hover {
+  background-color:darkolivegreen;
+}
+
+a,
+.page-header h3,
+.cbp-af-header .nav a:hover,
+.highlight,
+#contact a.icon:hover {
+  color:olive;
+}
+
+.navbar .navbar-nav .current > a {
+  color:olive !important;
+}
+/* end accent colors */
+
 a.navbar-brand {
   min-height:50px;
   width:300px;
@@ -20,10 +45,8 @@ as well */
 
 .btn-primary{
 	background-color:rgb(40,40,40);
-}
-
-.btn-primary:hover{
-	background-color:olive;
+  padding:0.5em 2em;
+  font-size:1.5em;
 }
 
 section#mills {

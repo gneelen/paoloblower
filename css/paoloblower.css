@@ -18,6 +18,14 @@ as well */
   background-position:0px 5px;
 }
 
+.btn-primary{
+	background-color:rgb(40,40,40);
+}
+
+.btn-primary:hover{
+	background-color:olive;
+}
+
 section#mills {
   background-image:none;
   margin-top:4em;
@@ -46,7 +54,7 @@ div#intro {
 
 div#intro a {
   border-radius:2px;
-  font-size:2em;
+  font-size:1.3em;
 }
 
 .title {
@@ -60,13 +68,15 @@ div#intro a {
   background-image:url('../img/logos/full-white.png');
   background-size:100% auto;
   background-repeat:no-repeat;
-  min-height:200px;
+  min-height:240px;
   width:500px;
 
   margin: 0 auto;
   margin-top:100px;
   margin-bottom:50px;
 }
+
+
 
 video#bgvid {
   margin-left:-55px;

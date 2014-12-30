@@ -49,6 +49,25 @@ as well */
   font-size:1.5em;
 }
 
+section.cta{
+  background-color:olive;
+  color:white;
+}
+
+section.cta span.highlight{
+  color:#fff;
+}
+
+button.btn.contact-button{
+  background-color:rgb(40,40,40);
+}
+
+button.btn.contact-button:hover{
+  background-color:sienna;
+}
+
+
+
 section .page-header.text-center {
   font-size:1.2em;
 }

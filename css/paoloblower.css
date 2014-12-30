@@ -109,6 +109,14 @@ div#intro a {
   margin-bottom:2.5em;
 }
 
+.row img.story-photo-bottom{
+  margin-top:20px;
+}
+
+.story-text{
+  font-size:1.2em;
+}
+
 video#bgvid {
   margin-left:-55px;
   right:0;

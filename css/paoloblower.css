@@ -2,15 +2,25 @@ svg {
   display:none;
 }
 
+.row+.row {
+  margin-top:2.1em;
+}
+
 /* accent colors */
 .btn-primary:hover,
-button.btn.contact-button {
+.btn.contact-button {
   border:none;
   background-color:olive;
 }
 
-button.btn.contact-button:hover {
-  background-color:darkolivegreen;
+a.btn.contact-button {
+  background-color:black;
+  color:white;
+}
+
+a.btn.contact-button:hover {
+  background-color:black;
+  color:olive;
 }
 
 a,
@@ -24,6 +34,18 @@ a,
 .navbar .navbar-nav .current > a {
   color:olive !important;
 }
+
+section.cta {
+  background-color:olive;
+  color:white;
+}
+
+section.cta h2,
+section.cta h3,
+section.cta span.highlight {
+  color:white;
+}
+
 /* end accent colors */
 
 a.navbar-brand {
@@ -107,6 +129,27 @@ div#intro a {
 .title p {
   margin-top:2.5em;
   margin-bottom:2.5em;
+}
+
+.address {
+  text-align:right;
+}
+.address p {
+  font-size:1.7em;
+  padding:0 !important;
+}
+
+a.btn.contact-button {
+  text-transform:none;
+  border:none;
+  margin:0;
+  margin-bottom:2em;
+}
+
+#map {
+  min-height:250px;
+  width:250px;
+  margin:0 auto;
 }
 
 video#bgvid {

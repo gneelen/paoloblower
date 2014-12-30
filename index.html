@@ -26,6 +26,12 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 
+    <!-- Auticons font -->
+    <link href="css/auticons.css" rel="stylesheet">
+
+    <!-- Leaflet JS for mapping -->
+    <link href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" rel="stylesheet" />
+
     <!-- Paolo Blower specific styling -->
     <link href="css/paoloblower.css" rel="stylesheet">
 
@@ -318,7 +324,7 @@
     </section>
     <!-- Call to Action
     ================================================== -->
-    <section class="cta text-center dark">
+    <section class="cta text-center">
       <div class="page-header text-center">
         <h3>Contact</h3>
       </div>
@@ -327,51 +333,35 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <h2>Have a great idea? <span class="highlight">Let us help!</span></h2>
-            <p><button class="btn contact-button" type="button" role="button">Contact us</button></p>
-            <div class='contact-form'>
-              <form name="sentMessage" id="contactForm"  novalidate>
-                <div class='name'>
-                  <input class='form-control first' placeholder='First Name' type='text' id="first_name" autofocus required data-validation-required-message="Please enter your first name">
-                  <input class='last' placeholder='Last Name' type='text' id="last_name" required data-validation-required-message="Please enter your last name">
-                </div>
-                <div class='contact'>
-                  <input class='form-control email' placeholder='E-mail Address' type='text' id="email" required data-validation-required-message="Please enter your email">
-                </div>
-                <div class='message'>
-                  <textarea class="form-control" placeholder='Your message' id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
-                </div>
-                <div id="success"> </div> <!-- For success/fail messages -->
-                <footer class="submit-button">
-                  <button type="submit">Send your message</button>
-                </footer>
-              </form>
+            <h2>Come visit our showroom</h2>
+            <h4>We'd love to host you in our showroom, right in the heart of New York City's storied Garment District.</h4>
+          </div>
+        </div>
 
-            </div>
+        <div class="row">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-4 address">
+            <p><a href="mailto:jbkimelman@gmail.com" class="btn contact-button">Schedule with us</a></p>
+            <p>123 Shirt Street</p>
+            <p>Garment District</p>
+            <p>NY, NY 11000</p>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div id="map"></div>
+          </div>
+          <div class="col-lg-2">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+
           </div>
         </div>
 
       </div>
 
     </section>
-
-
-    <!-- Footer
-    ================================================== -->
-    <footer id="contact" class="footer">
-
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <a class="icon" href="http://www.twitter.com/dparrelli" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a class="icon" href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a class="icon" href="http://www.dribbble.com/dparrelli" target="_blank"><i class="fa fa-dribbble"></i></a>
-            <a class="icon" href="http://www.workingnomads.co" target="_blank"><i class="fa fa-globe"></i></a>
-          </div>
-        </div>
-      </div>
-
-    </footer>
 
 
     <svg xmlns="http://www.w3.org/2000/svg">
@@ -384,6 +374,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/classie.js"></script>

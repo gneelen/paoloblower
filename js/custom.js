@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 function init() {
   onePageScroll();
-  scrollAnchor();
+  addMap();
 }
 
 /* --- Full Screen Container ------------- */
@@ -76,6 +76,14 @@ function onePageScroll() {
   });
 }
 
+function addMap() {
+  var map = L.map('map', { zoomControl:false }).setView([40.7541085, -73.990679], 14);
+  var marker = L.marker([40.7541085, -73.990679]).addTo(map);
+  L.tileLayer('http://{s}.tiles.mapbox.com/v3/jeremiak.kkaci7o7/{z}/{x}/{y}.png',
+  {
+    maxZoom: 18
+  }).addTo(map);
+}
 
 $(window).scroll(function() {
   var windowpos = $(window).scrollTop() ;

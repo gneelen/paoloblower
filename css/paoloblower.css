@@ -131,6 +131,7 @@ div#intro a {
   margin-bottom:2.5em;
 }
 
+<<<<<<< HEAD
 .address {
   text-align:right;
 }
@@ -152,6 +153,14 @@ a.btn.contact-button {
   width:170px;
   margin:0 auto;
   -webkit-clip-path: cirlce(50%,50%,50%);
+}
+
+.row img.story-photo-bottom{
+  margin-top:20px;
+}
+
+.story-text{
+  font-size:1.2em;
 }
 
 video#bgvid {

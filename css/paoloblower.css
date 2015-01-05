@@ -7,10 +7,16 @@ svg {
 }
 
 /* accent colors */
-.btn-primary:hover,
+.btn-primary {
+  background-color:sienna;
+  border:none;
+}
+.btn-primary:hover {
+  background-color:rgb(40,40,40);
+}
 .btn.contact-button {
   border:none;
-  background-color:olive;
+  background-color:sienna;
 }
 
 a.btn.contact-button {
@@ -20,7 +26,7 @@ a.btn.contact-button {
 
 a.btn.contact-button:hover {
   background-color:black;
-  color:olive;
+  color:sienna;
 }
 
 a,
@@ -28,15 +34,15 @@ a,
 .cbp-af-header .nav a:hover,
 .highlight,
 #contact a.icon:hover {
-  color:olive;
+  color:sienna;
 }
 
 .navbar .navbar-nav .current > a {
-  color:olive !important;
+  color:sienna !important;
 }
 
 section.cta {
-  background-color:olive;
+  background-color:sienna;
   color:white;
 }
 
@@ -66,9 +72,9 @@ as well */
 }
 
 .btn-primary{
-	background-color:rgb(40,40,40);
   padding:.7em 2.1em;
   font-size:1.5em;
+  margin-top:40px;
 }
 
 section .page-header.text-center {
@@ -119,8 +125,8 @@ div#intro a {
   background-size:100% auto;
   background-repeat:no-repeat;
   background-position-y:50%;
-  min-height:240px;
-  width:500px;
+  min-height:300px;
+  width:550px;
   margin: 0 auto;
   margin-top:100px;
 }

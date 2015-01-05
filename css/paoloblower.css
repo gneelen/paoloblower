@@ -20,7 +20,7 @@ a.btn.contact-button {
 
 a.btn.contact-button:hover {
   background-color:black;
-  color:olive;
+  color:sienna;
 }
 
 a,
@@ -28,15 +28,15 @@ a,
 .cbp-af-header .nav a:hover,
 .highlight,
 #contact a.icon:hover {
-  color:olive;
+  color:sienna;
 }
 
 .navbar .navbar-nav .current > a {
-  color:olive !important;
+  color:sienna !important;
 }
 
 section.cta {
-  background-color:olive;
+  background-color:sienna;
   color:white;
 }
 

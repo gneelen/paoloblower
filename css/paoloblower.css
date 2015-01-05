@@ -10,7 +10,7 @@ svg {
 .btn-primary:hover,
 .btn.contact-button {
   border:none;
-  background-color:olive;
+  background-color:sienna;
 }
 
 a.btn.contact-button {
@@ -69,6 +69,7 @@ as well */
 	background-color:rgb(40,40,40);
   padding:.7em 2.1em;
   font-size:1.5em;
+  margin-top:40px;
 }
 
 section .page-header.text-center {

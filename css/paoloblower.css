@@ -7,7 +7,13 @@ svg {
 }
 
 /* accent colors */
-.btn-primary:hover,
+.btn-primary {
+  background-color:sienna;
+  border:none;
+}
+.btn-primary:hover {
+  background-color:rgb(40,40,40);
+}
 .btn.contact-button {
   border:none;
   background-color:sienna;
@@ -66,7 +72,6 @@ as well */
 }
 
 .btn-primary{
-	background-color:rgb(40,40,40);
   padding:.7em 2.1em;
   font-size:1.5em;
   margin-top:40px;

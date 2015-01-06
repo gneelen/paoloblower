@@ -106,10 +106,9 @@ section#mills {
   min-height:550px;
 }
 
-.carousel-inner .item h1,
-.carousel-inner .item h2,
-.carousel-inner .item .carousel-caption {
-  color:black !important;
+.carousel-caption {
+  background-color:rgba(0,0,0,0.6);
+  color:white;
 }
 
 div#intro {

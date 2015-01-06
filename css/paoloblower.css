@@ -16,26 +16,12 @@ img:hover, .img:hover {
 }
 
 /* accent colors */
-.btn-primary {
+.btn-primary, a.btn.contact-button {
   background-color:#d64e24;
   border:none;
 }
-.btn-primary:hover {
+.btn-primary:hover, a.btn.contact-button:hover  {
   background-color:rgb(40,40,40);
-}
-.btn.contact-button {
-  border:none;
-  background-color:#d64e24;
-}
-
-a.btn.contact-button {
-  background-color:rgb(43, 45, 53);
-  color:white;
-}
-
-a.btn.contact-button:hover {
-  background-color:#d64e24;
-  color:#fff;
 }
 
 a,

@@ -76,8 +76,8 @@ used by the navbar when it turns white;
 let's just overload it with this declaration
 as well */
 .cbp-af-header-shrink a.navbar-brand {
-  background-image:url('../img/logos/title.png');
-  background-position:0px 5px;
+  background-image:url('../img/logos/full-black.png');
+  background-position:0px -15px;
 }
 
 .btn-primary{

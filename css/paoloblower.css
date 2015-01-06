@@ -6,6 +6,15 @@ svg {
   margin-top:2.1em;
 }
 
+img, .img {
+  filter:grayscale(100%);
+  -webkit-filter:grayscale(100%);
+}
+img:hover, .img:hover {
+  filter:grayscale(0%);
+  -webkit-filter:grayscale(0%);
+}
+
 /* accent colors */
 .btn-primary {
   background-color:sienna;
@@ -106,6 +115,7 @@ section#mills {
 div#intro {
   text-align:center;
   color:white;
+  padding-top:55px;
 }
 
 div#intro a {
@@ -114,9 +124,7 @@ div#intro a {
 }
 
 .title {
-  position:absolute;
-  left:25%;
-  top:10%;
+  margin-top:10em;
 }
 
 .logo {
@@ -169,13 +177,13 @@ a.btn.contact-button {
 }
 
 video#bgvid {
-  margin-left:-55px;
+  position:absolute;
+  z-index:-100;
   right:0;
   bottom:0;
-  min-width:100%;
   min-height:100%;
   width:auto;
   height:auto;
-  z-index:-100;
+  filter:grayscale(100%);
   -webkit-filter:grayscale(100%);
 }

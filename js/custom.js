@@ -79,26 +79,71 @@ function onePageScroll() {
   });
 }
 
+var templateCache = {};
+
+function makeTemplateObject(templateId) {
+  var templateText, templateObject;
+
+  if (templateCache[templateId] == undefined) {
+    templateText = $('#'+templateId).text().trim();
+    templateCache[templateId] = templateText;
+  }
+  else {
+    templateText = templateCache[templateId]
+  }
+
+  templateObject = $('<div/>').html(templateText).contents();
+
+  return templateObject;
+}
+
 function addAboutParagraphs(paragraphs) {
+  $('#about p').each(function(i, e) {
+    $(e).text(paragraphs[i]['text']);
+  });
+}
+
+function createMillImageUrl(index) {
+  return 'url(/img/mills/mill-'+index+'.jpg)'
+}
+
+function addMills(mills) {
+
+  mills.forEach(function(e, i) {
+    var mill = makeTemplateObject('mill-template');
+
+    if (i == 0) {
+      mill.addClass('active');
+    }
+
+    mill.css('background-image', createMillImageUrl(i+1));
+
+    mill.find('h2').text(mills[i]['name']);
+    mill.find('p').text(mills[i]['location']);
+
+    $('#mill-carousel').append(mill);
+  });
 
 }
 
 function addTestimonial(testimonialData) {
-  var templateText = $('#testimonialTemplate').text().trim();
-  var testimonial = $('<div/>').html(templateText).contents();
+  var testimonial = makeTemplateObject('testimonial-template');
 
   testimonial.find('p').text(testimonialData['text']);
   testimonial.find('.name').text(testimonialData['name']);
   testimonial.find('.company').text(testimonialData['company']);
 
-  $('#testimonialList').append(testimonial);
+  $('#testimonial-list').append(testimonial);
 }
 
 function processSpreadsheetData(data, tabletop) {
   console.log("Successfully processed!")
   console.log('data', data);
 
+  window.data = data;
+
   addAboutParagraphs(data['About']['elements']);
+  addMills(data['Mills']['elements']);
 
   for (var t=0;t<data['Testimonials']['elements'].length;t++) {
     addTestimonial(data['Testimonials']['elements'][t]);

@@ -29,13 +29,13 @@ img:hover, .img:hover {
 }
 
 a.btn.contact-button {
-  background-color:black;
+  background-color:rgb(43, 45, 53);
   color:white;
 }
 
 a.btn.contact-button:hover {
-  background-color:black;
-  color:#d64e24;
+  background-color:#d64e24;
+  color:#fff;
 }
 
 a,

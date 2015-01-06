@@ -17,7 +17,7 @@ img:hover, .img:hover {
 
 /* accent colors */
 .btn-primary {
-  background-color:sienna;
+  background-color:#d64e24;
   border:none;
 }
 .btn-primary:hover {
@@ -25,7 +25,7 @@ img:hover, .img:hover {
 }
 .btn.contact-button {
   border:none;
-  background-color:sienna;
+  background-color:#d64e24;
 }
 
 a.btn.contact-button {
@@ -35,7 +35,7 @@ a.btn.contact-button {
 
 a.btn.contact-button:hover {
   background-color:black;
-  color:sienna;
+  color:#d64e24;
 }
 
 a,
@@ -43,15 +43,15 @@ a,
 .cbp-af-header .nav a:hover,
 .highlight,
 #contact a.icon:hover {
-  color:sienna;
+  color:#d64e24;
 }
 
 .navbar .navbar-nav .current > a {
-  color:sienna !important;
+  color:#d64e24 !important;
 }
 
 section.cta {
-  background-color:sienna;
+  background-color:#d64e24;
   color:white;
 }
 

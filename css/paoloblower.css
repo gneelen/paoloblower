@@ -144,6 +144,22 @@ div#intro a {
   font-size:1.5em;
 }
 
+#about img {
+  width:100%;
+}
+
+#about .img {
+  margin:0 auto;
+}
+
+#about .first-image {
+  width:400px;
+}
+
+#about .second-image {
+  width:300px;
+}
+
 .address {
   text-align:right;
 }

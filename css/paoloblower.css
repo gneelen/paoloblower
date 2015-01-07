@@ -164,9 +164,6 @@ div#intro a {
   font-size:1.5em;
 }
 
-<<<<<<< HEAD
-.address:first-child {
-=======
 #about img {
   width:100%;
 }
@@ -186,7 +183,6 @@ div#intro a {
 }
 
 .address {
->>>>>>> about-images
   text-align:right;
 }
 .address:last-child {

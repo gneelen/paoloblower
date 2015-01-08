@@ -107,18 +107,23 @@ function addAboutParagraphs(paragraphs) {
 function addMills(mills) {
 
   mills.forEach(function(e, i) {
-    var mill = makeTemplateObject('mill-template');
+    console.log('e', e);
+    console.log('i', i);
+
+    var mill = makeTemplateObject('mill-template'),
+        millId = mills[i]['millidusedforphotos'];
 
     if (i == 0) {
       mill.addClass('active');
     }
+
 
     bgImages = ['img/mills/becagli/image1.jpg','img/mills/becagli/image2.jpg','img/mills/becagli/image3.jpg'];
 
     var pictureElements = mill.find('.mill-picture');
 
     pictureElements.each(function(pictureIndex, pictureElement) {
-      $(pictureElement).css('background-image', 'url('+bgImages[pictureIndex]+')');
+      $(pictureElement).css('background-image', 'url(img/mills/' + millId + '/' + (pictureIndex + 1) + '.jpg)');
     });
 
     mill.find('h2').text(mills[i]['name']);

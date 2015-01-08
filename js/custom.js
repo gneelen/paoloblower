@@ -137,8 +137,26 @@ function addTestimonial(testimonialData) {
   $('#testimonial-list').append(testimonial);
 }
 
-function updateSocialMediaLinks(data) {
-  data.forEach(function(d) {
+function addContactAddresses(addressData) {
+  addressData.forEach(function(d) {
+    var id;
+    if (d['location'] == 'New York City') {
+      id = 'nyc';
+    }
+    else if (d['location'] == 'Italy') {
+      id = 'italy';
+    }
+
+    $('#'+id+' .street').text(d['streetaddress']);
+    $('#'+id+' .city').text(d['city']);
+    $('#'+id+' .state').text(d['state']);
+    $('#'+id+' .country').text(d['country']);
+    $('#'+id+' .phone').text(d['phonenumber']);
+  })
+}
+
+function updateSocialMediaLinks(socialMediaData) {
+  socialMediaData.forEach(function(d) {
     if (d['service'] == 'Facebook') {
       $('.icon#fb').attr('href', 'https://www.facebook.com/' + d['username']);
     }
@@ -160,7 +178,7 @@ function processSpreadsheetData(data, tabletop) {
   addAboutParagraphs(data['About']['elements']);
   addMills(data['Mills']['elements']);
   updateSocialMediaLinks(data['Social']['elements']);
-
+  addContactAddresses(data['Contact']['elements'])
   for (var t=0;t<data['Testimonials']['elements'].length;t++) {
     addTestimonial(data['Testimonials']['elements'][t]);
   }

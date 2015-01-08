@@ -124,6 +124,7 @@ div.img .card img {
 .mill-picture {
   background-size:cover;
   background-repeat:no-repeat;
+  background-position-x:50%;
   min-height:540px;
   width:32%;
   margin-right:1%;
@@ -154,7 +155,6 @@ div.img .card img {
 div#intro {
   text-align:center;
   color:white;
-  padding-top:55px;
 }
 
 div#intro a {
@@ -242,13 +242,16 @@ div.recycle {
 }
 
 video#bgvid {
+  background-size:cover;
   position:absolute;
   z-index:-100;
+  left:0;
   right:0;
+  top:-50px;
   bottom:0;
-  min-height:100%;
-  width:auto;
-  height:auto;
+  min-height:100px;
+  height:100%;
+  width:100%;
   filter:grayscale(100%);
   -webkit-filter:grayscale(100%);
 }
@@ -265,9 +268,16 @@ video#bgvid {
   a.btn.contact-button {
     font-size:.9em;
   }
+
+  div.recycle {
+    text-align:center;
+  }
 }
 
 @media all and (max-width: 350px) {
+  #bgvid {
+    display:none;
+  }
   .logo {
     min-height:150px;
     width:300px;
@@ -293,5 +303,4 @@ video#bgvid {
   .mill-picture:nth-child(2) {
     display:none;
   }
-
 }

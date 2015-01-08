@@ -26,9 +26,19 @@ function fullScreenContainer() {
   // Set Initial Screen Dimensions
 
   var screenWidth = $(window).width() + "px";
-  var screenHeight = $(window).height() + "px";
+  var screenHeight;
 
-  $("#intro, #intro .item, #intro-video").css({
+  if (window.innerHeight > 720) {
+    screenHeight = '590px';
+  }
+  else {
+    screenHeight = window.innerHeight + "px";
+  }
+
+  console.log('screenWidth', screenWidth);
+  console.log('screenHeight', screenHeight);
+
+  $("#intro").css({
     width: screenWidth,
     height: screenHeight
   });
@@ -40,11 +50,21 @@ function fullScreenContainer() {
     // Fetch Screen Dimensions
 
     var screenWidth = $(window).width() + "px";
-    var screenHeight = $(window).height() + "px";
+    var screenHeight;
+
+    if (window.innerHeight > 720) {
+      screenHeight = '590px';
+    }
+    else {
+      screenHeight = window.innerHeight + "px";
+    }
+
+    console.log('screenWidth', screenWidth);
+    console.log('screenHeight', screenHeight);
 
     // Set Slides to new Screen Dimensions
 
-    $("#intro, #intro .item, #intro-video, #intro-video .item").css({
+    $("#intro").css({
       width: screenWidth,
       height: screenHeight
     });
@@ -107,9 +127,6 @@ function addAboutParagraphs(paragraphs) {
 function addMills(mills) {
 
   mills.forEach(function(e, i) {
-    console.log('e', e);
-    console.log('i', i);
-
     var mill = makeTemplateObject('mill-template'),
         millId = mills[i]['millidusedforphotos'];
 
@@ -147,7 +164,7 @@ function addTestimonial(testimonialData) {
 function addContactAddresses(addressData) {
   addressData.forEach(function(d) {
     var id;
-    if (d['location'] == 'New York City') {
+    if (d['location'] == 'New York') {
       id = 'nyc';
     }
     else if (d['location'] == 'Italy') {

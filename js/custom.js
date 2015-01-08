@@ -104,10 +104,6 @@ function addAboutParagraphs(paragraphs) {
   });
 }
 
-function createMillImageUrl(index) {
-  return 'url(/img/mills/mill-'+index+'.jpg)'
-}
-
 function addMills(mills) {
 
   mills.forEach(function(e, i) {
@@ -117,7 +113,13 @@ function addMills(mills) {
       mill.addClass('active');
     }
 
-    mill.css('background-image', createMillImageUrl(i+1));
+    bgImages = ['img/mills/becagli/image1.jpg','img/mills/becagli/image2.jpg','img/mills/becagli/image3.jpg'];
+
+    var pictureElements = mill.find('.mill-picture');
+
+    pictureElements.each(function(pictureIndex, pictureElement) {
+      $(pictureElement).css('background-image', 'url('+bgImages[pictureIndex]+')');
+    });
 
     mill.find('h2').text(mills[i]['name']);
     mill.find('p').text(mills[i]['location']);

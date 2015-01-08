@@ -137,6 +137,20 @@ function addTestimonial(testimonialData) {
   $('#testimonial-list').append(testimonial);
 }
 
+function updateSocialMediaLinks(data) {
+  data.forEach(function(d) {
+    if (d['service'] == 'Facebook') {
+      $('.icon#fb').attr('href', 'https://www.facebook.com/' + d['username']);
+    }
+    else if (d['service'] == 'Twitter') {
+      $('.icon#twitter').attr('href', 'https://www.twitter.com/' + d['username']);
+    }
+    else if (d['service'] == 'Instagram') {
+      $('.icon#instagram').attr('href', 'https://www.instagram.com/' + d['username']);
+    }
+  })
+}
+
 function processSpreadsheetData(data, tabletop) {
   console.log("Successfully processed!")
   console.log('data', data);
@@ -145,6 +159,7 @@ function processSpreadsheetData(data, tabletop) {
 
   addAboutParagraphs(data['About']['elements']);
   addMills(data['Mills']['elements']);
+  updateSocialMediaLinks(data['Social']['elements']);
 
   for (var t=0;t<data['Testimonials']['elements'].length;t++) {
     addTestimonial(data['Testimonials']['elements'][t]);
@@ -175,7 +190,7 @@ function startFlippingAboutImages() {
 function addMap() {
   var map = L.map('map', { zoomControl:false }).setView([40.7541085, -73.990679], 14);
   var marker = L.marker([40.7541085, -73.990679]).addTo(map);
-   
+
   L.tileLayer('http://{s}.tiles.mapbox.com/v3/jeremiak.kkaci7o7/{z}/{x}/{y}.png',{maxZoom: 18}).addTo(map);
 }
 

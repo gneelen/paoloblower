@@ -104,10 +104,6 @@ function addAboutParagraphs(paragraphs) {
   });
 }
 
-function createMillImageUrl(index) {
-  return 'url(/img/mills/mill-'+index+'.jpg)'
-}
-
 function addMills(mills) {
 
   mills.forEach(function(e, i) {
@@ -122,11 +118,6 @@ function addMills(mills) {
     var pictureElements = mill.find('.mill-picture');
 
     pictureElements.each(function(pictureIndex, pictureElement) {
-      console.log('pictureElement', pictureElement);
-      console.log('bgImages[pictureIndex]', 'url('+bgImages[pictureIndex]+');');
-
-      window.x = pictureElement;
-
       $(pictureElement).css('background-image', 'url('+bgImages[pictureIndex]+')');
     });
 

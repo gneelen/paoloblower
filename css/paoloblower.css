@@ -207,12 +207,12 @@ a.btn.contact-button {
   margin:0 auto;
 }
 
-.row img.story-photo-bottom{
-  margin-top:20px;
-}
-
 .story-text{
   font-size:1.2em;
+}
+
+.social-media {
+  font-size:1.7em;
 }
 
 video#bgvid {

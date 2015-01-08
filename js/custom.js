@@ -117,7 +117,18 @@ function addMills(mills) {
       mill.addClass('active');
     }
 
-    mill.css('background-image', createMillImageUrl(i+1));
+    bgImages = ['img/mills/becagli/image1.jpg','img/mills/becagli/image2.jpg','img/mills/becagli/image3.jpg'];
+
+    var pictureElements = mill.find('.mill-picture');
+
+    pictureElements.each(function(pictureIndex, pictureElement) {
+      console.log('pictureElement', pictureElement);
+      console.log('bgImages[pictureIndex]', 'url('+bgImages[pictureIndex]+');');
+
+      window.x = pictureElement;
+
+      $(pictureElement).css('background-image', 'url('+bgImages[pictureIndex]+')');
+    });
 
     mill.find('h2').text(mills[i]['name']);
     mill.find('p').text(mills[i]['location']);

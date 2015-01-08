@@ -117,12 +117,32 @@ div.img .card img {
   transform:rotateY(180deg);
 }
 
-section#mills {
-  background-image:none;
+.mill-pictures {
+  width:100%;
 }
+
+.mill-picture {
+  background-size:cover;
+  background-repeat:no-repeat;
+  min-height:540px;
+  width:32%;
+  margin-right:1%;
+  float:left;
+  filter:grayscale(100%);
+  -webkit-filter:grayscale(100%);
+}
+.mill-picture:last-child {
+  margin-right:0;
+}
+
+.mill-picture:hover {
+  filter:grayscale(0%);
+  -webkit-filter:grayscale(0%);
+}
+
 .carousel-inner .item {
   background-repeat:no-repeat;
-  background-size:cover;
+  background-size:contain;
   min-height:550px;
 }
 

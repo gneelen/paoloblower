@@ -231,14 +231,10 @@ a.btn.contact-button {
   font-size:1.2em;
 }
 
-div.recyle {
+div.recycle {
   color:white;
   text-align:right;
   opacity:0.7;
-}
-
-div.recyle a:hover {
-  color:white;
 }
 
 .social-media {

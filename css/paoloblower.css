@@ -334,8 +334,8 @@ video#bgvid {
 }
 
 @media all and (max-width: 350px) {
-  #bgvid {
+  /*#bgvid {
     display:none;
-  }
+  }*/
 
 }

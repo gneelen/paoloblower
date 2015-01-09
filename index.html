@@ -12,7 +12,7 @@
 
     <title>PaoloBlower | International Textile Workshop</title>
 
-    <link href="css/vendor.css" rel="stylesheet">
+    <link href="css/vendor.min.css" rel="stylesheet">
 
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
@@ -65,10 +65,10 @@
       </div>
     </div>
 
-
-    <video autoplay muted loop id="bgvid">
+    <div class="video-fallback"></div>
+    <video preload=auto oncanplay='hideImageWhenVideoCanPlay()' autoplay muted loop id="bgvid">
       <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-      <source src="http://f.cl.ly/items/3C3H430g1L1f3v2L3i1Y/looms.smaller.silent.mp4" type="video/mp4">
+      <source src="./looms.smaller.silent.mp4" type="video/mp4" defer>
     </video>
 
     <!-- Hero Banner
@@ -277,7 +277,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <!-- // <script src="http://10.0.1.195:8080/target/target-script-min.js#anonymous"></script> -->
+    <!-- // <script src="http://10.0.0.21:8080/target/target-script-min.js#anonymous"></script> -->
 
     <script src="js/leaflet.js"></script>
     <script src="js/tabletop-1-3-5.min.js"></script>

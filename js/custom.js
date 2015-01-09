@@ -100,6 +100,11 @@ function onePageScroll() {
   });
 }
 
+function hideImageWhenVideoCanPlay() {
+  console.log('well play away');
+  $('.video-fallback').css('display', 'none');
+}
+
 var templateCache = {};
 
 function makeTemplateObject(templateId) {

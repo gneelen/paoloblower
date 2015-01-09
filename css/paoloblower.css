@@ -250,26 +250,28 @@ div.recycle {
   font-size:1.7em;
 }
 
-video#bgvid {
-  object-fit: cover;
-  position:fixed;
-  z-index:-1;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
-  min-height:100px;
-  height:100%;
+.video-fallback {
+  background-image:url(../img/video-fallback-min.png);
+  background-size:cover;
   width:100%;
-  filter:grayscale(100%);
-  -moz-filter:grayscale(100%);
-  -webkit-filter:grayscale(100%);
+  height:100%;
+  min-height:100%;
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:-1;
 }
 
-#bgvid {
+video#bgvid {
+  object-fit: cover;
+  z-index:-2;
   position: fixed;
   top: 0;
   left: 0;
+
+  filter:grayscale(100%);
+  -moz-filter:grayscale(100%);
+  -webkit-filter:grayscale(100%);
 }
 @media (min-aspect-ratio: 16/9) {
   #bgvid {

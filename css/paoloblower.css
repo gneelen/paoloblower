@@ -28,11 +28,14 @@ img:hover, .img:hover {
 }
 
 a,
-.page-header h3,
 .cbp-af-header .nav a:hover,
 .highlight,
 #contact a.icon:hover {
   color:#d64e24;
+}
+
+section h2 {
+  color:#d64e24 !important;
 }
 
 .navbar .navbar-nav .current > a {
@@ -213,9 +216,11 @@ div#intro a {
 
 .address {
   text-align:right;
+  padding-right:2em;
 }
 .address:last-child {
   text-align:left;
+  padding-left:2em;
 }
 .address p {
   font-size:1.7em;
@@ -329,7 +334,12 @@ video#bgvid {
   a.btn.contact-button {
     font-size:.9em;
   }
-
+  .address {
+    padding-right:15px;
+  }
+  .address:last-child {
+    padding-left:15px;
+  }
   div.recycle {
     text-align:center;
   }

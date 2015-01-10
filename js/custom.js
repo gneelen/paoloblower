@@ -17,6 +17,9 @@ function init() {
   addMap();
   getDataFromGoogleSpreadsheet();
   startFlippingAboutImages();
+
+  var video = $('video')[0];
+  video.addEventListener('canplaythrough', hideImageWhenVideoCanPlay);
 }
 
 /* --- Full Screen Container ------------- */

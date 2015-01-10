@@ -134,13 +134,22 @@ function addAboutParagraphs(paragraphs) {
 
 function addMills(mills) {
 
+  var carouselIndicators = $('ol.carousel-indicators');
+
   mills.forEach(function(e, i) {
     var mill = makeTemplateObject('mill-template'),
-        millId = mills[i]['millidusedforphotos'];
+        millId = mills[i]['millidusedforphotos'],
+        carouselIndicator = document.createElement('li');
+
+    $(carouselIndicator).attr('data-target', '#carousel-example-generic');
+    $(carouselIndicator).attr('data-slide-to', i);
 
     if (i == 0) {
+      $(carouselIndicator).addClass('active');
       mill.addClass('active');
     }
+
+    carouselIndicators.append(carouselIndicator);
 
     var pictureElements = mill.find('.mill-picture');
 

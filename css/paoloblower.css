@@ -113,13 +113,17 @@ div.img .card {
   transform:rotateY(180deg);
 }
 
-div.img .card img {
+div.img .card .img {
+  background-size:cover;
+  background-repeat:no-repeat;
+  width:100%;
+  height:100%;
   display:block;
   position:absolute;
   backface-visibility:hidden;
 }
 
-.card img:last-child {
+.card .img:last-child {
   transform:rotateY(180deg);
 }
 
@@ -352,11 +356,4 @@ video#bgvid {
   div.recycle {
     text-align:center;
   }
-}
-
-@media all and (max-width: 350px) {
-  /*#bgvid {
-    display:none;
-  }*/
-
 }

@@ -139,9 +139,6 @@ function addMills(mills) {
       mill.addClass('active');
     }
 
-
-    bgImages = ['img/mills/becagli/image1.jpg','img/mills/becagli/image2.jpg','img/mills/becagli/image3.jpg'];
-
     var pictureElements = mill.find('.mill-picture');
 
     pictureElements.each(function(pictureIndex, pictureElement) {
@@ -201,8 +198,6 @@ function updateSocialMediaLinks(socialMediaData) {
 function processSpreadsheetData(data, tabletop) {
   console.log("Successfully processed!")
   console.log('data', data);
-
-  window.data = data;
 
   addAboutParagraphs(data['About']['elements']);
   addMills(data['Mills']['elements']);

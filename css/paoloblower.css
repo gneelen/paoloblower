@@ -256,7 +256,7 @@ div.recycle {
 }
 
 .video-fallback {
-  background-image:url(../img/video-fallback-min.png);
+  background-image:url(../img/video-fallback.jpeg);
   background-size:cover;
   width:100%;
   height:100%;
@@ -265,6 +265,10 @@ div.recycle {
   left:0;
   top:0;
   z-index:-1;
+
+  filter:grayscale(100%);
+  -moz-filter:grayscale(100%);
+  -webkit-filter:grayscale(100%);
 }
 
 video#bgvid {
@@ -291,10 +295,15 @@ video#bgvid {
   }
 }
 
-@media all and (max-width:1000px) {
+@media all and (max-width:1024px) {
   ul.nav.navbar-nav {
     margin-top:-65px;
   }
+
+  section.cta {
+    padding-bottom:0;
+  }
+}
 
 @media all and (max-width:768px) {
   ul.nav.navbar-nav {

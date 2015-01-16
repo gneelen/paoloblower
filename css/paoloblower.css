@@ -106,10 +106,15 @@ div.img .card {
   height:100%;
   position:absolute;
   transform-style:preserve-3d;
+  -webkit-transition:transform 1s;
+  -moz-transition:transform 1s;
   transition:transform 1s;
 }
 
 .card.flipped {
+  -webkit-transform:rotateY(180deg);
+  -moz-transform:rotateY(180deg);
+  -o-transform:rotateY(180deg);
   transform:rotateY(180deg);
 }
 

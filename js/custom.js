@@ -20,6 +20,10 @@ function init() {
 
   var video = $('video')[0];
   video.addEventListener('canplaythrough', hideImageWhenVideoCanPlay);
+  
+  $('.carousel').carousel({interval:1000});
+
+
 }
 
 /* --- Full Screen Container ------------- */

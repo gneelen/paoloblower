@@ -115,7 +115,7 @@ div.img .card {
   transition:transform 1s;
 }
 
-.card.flipped {
+.card.flipped, .card .img:last-child {
   -webkit-transform:rotateY(180deg);
   -moz-transform:rotateY(180deg);
   -o-transform:rotateY(180deg);
@@ -131,10 +131,6 @@ div.img .card .img {
   position:absolute;
   -webkit-backface-visibility:hidden;
   backface-visibility:hidden;
-}
-
-.card .img:last-child {
-  transform:rotateY(180deg);
 }
 
 .mill-pictures {

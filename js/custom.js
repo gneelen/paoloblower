@@ -175,7 +175,7 @@ function addTestimonial(testimonialData) {
   testimonial.find('p').text(testimonialData['text']);
   testimonial.find('.name').text(testimonialData['name']);
   testimonial.find('.company').text(testimonialData['company']);
-
+  
   $('#testimonial-list').append(testimonial);
 }
 
@@ -211,14 +211,22 @@ function updateSocialMediaLinks(socialMediaData) {
   })
 }
 
+function clearStaticContent() {
+  console.log('Clearing static content');
+  $('#testimonial-list').empty();
+}
+
 function processSpreadsheetData(data, tabletop) {
-  console.log("Successfully processed!")
+  console.log("Successfully processed!");
   console.log('data', data);
+
+  clearStaticContent();
 
   addAboutParagraphs(data['About']['elements']);
   addMills(data['Mills']['elements']);
   updateSocialMediaLinks(data['Social']['elements']);
   addContactAddresses(data['Contact']['elements'])
+
   for (var t=0;t<data['Testimonials']['elements'].length;t++) {
     addTestimonial(data['Testimonials']['elements'][t]);
   }

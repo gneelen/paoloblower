@@ -16,7 +16,6 @@ function init() {
   onePageScroll();
   addMap();
   getDataFromGoogleSpreadsheet();
-  startFlippingAboutImages();
 
   var video = $('video')[0];
   video.addEventListener('canplaythrough', hideImageWhenVideoCanPlay);
@@ -235,22 +234,6 @@ function processSpreadsheetData(data, tabletop) {
 function getDataFromGoogleSpreadsheet() {
   var docKey = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=15RKaYrdMGn-FSglHi4_QBKHVgiF_VwF7seg2jg6epyU&output=html';
   Tabletop.init( {key: docKey, callback: processSpreadsheetData, debug:true} );
-}
-
-function setIntervalForImageFlipping(sel, ms) {
-  setInterval(function() {
-    $(sel).toggleClass('flipped');
-  }, ms);
-}
-
-function startFlippingAboutImages() {
-  var flipDuration = 4000;
-
-  setIntervalForImageFlipping('.first-image .card', flipDuration);
-  setTimeout(function() {
-    // using a timeout to make sure the images dont flip at the same time
-    setIntervalForImageFlipping('.second-image .card', flipDuration);
-  }, flipDuration/2);
 }
 
 function addMap() {

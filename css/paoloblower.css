@@ -241,9 +241,15 @@ a.btn.contact-button {
 }
 
 div.recycle {
+  align-items: center;
   color:white;
-  text-align:right;
+  display: flex;
+  justify-content: flex-end;
   opacity:0.7;
+}
+
+div.recycle a {
+  font-size: 1.8em;
 }
 
 .social-media {

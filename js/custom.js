@@ -19,7 +19,7 @@ function init() {
 
   var video = $('video')[0];
   video.addEventListener('canplaythrough', hideImageWhenVideoCanPlay);
-  
+
   $('.carousel').carousel({interval:1000});
 
 
@@ -136,12 +136,22 @@ function addAboutParagraphs(paragraphs) {
 }
 
 function addMills(mills) {
+  createCarousel(mills, 'mill-template', 'mills');
+}
 
-  var carouselIndicators = $('ol.carousel-indicators');
+function addAtelier(atelier) {
+  console.log('atelier', atelier);
+  createCarousel(atelier, 'mill-template', 'atelier');
+}
 
-  mills.forEach(function(e, i) {
-    var mill = makeTemplateObject('mill-template'),
-        millId = mills[i]['millidusedforphotos'],
+function createCarousel(data, templateId, target) {
+
+  console.log('#' + target + ' ol.carousel-indicators');
+  var carouselIndicators = $('#' + target + ' ol.carousel-indicators');
+
+  data.forEach(function(e, i) {
+    var mill = makeTemplateObject(templateId),
+        millId = data[i]['millidusedforphotos'],
         carouselIndicator = document.createElement('li');
 
     $(carouselIndicator).attr('data-target', '#carousel-example-generic');
@@ -160,10 +170,10 @@ function addMills(mills) {
       $(pictureElement).css('background-image', 'url(img/mills/' + millId + '/' + (pictureIndex + 1) + '.jpg)');
     });
 
-    mill.find('h2').text(mills[i]['name']);
-    mill.find('p').text(mills[i]['location']);
+    mill.find('h2').text(data[i]['name']);
+    mill.find('p').text(data[i]['location']);
 
-    $('#mill-carousel').append(mill);
+    $('#' + target + '-carousel').append(mill);
   });
 
 }
@@ -174,7 +184,7 @@ function addTestimonial(testimonialData) {
   testimonial.find('p').text(testimonialData['text']);
   testimonial.find('.name').text(testimonialData['name']);
   testimonial.find('.company').text(testimonialData['company']);
-  
+
   $('#testimonial-list').append(testimonial);
 }
 
@@ -223,6 +233,7 @@ function processSpreadsheetData(data, tabletop) {
 
   addAboutParagraphs(data['About']['elements']);
   addMills(data['Mills']['elements']);
+  addAtelier(data['Atelier']['elements']);
   updateSocialMediaLinks(data['Social']['elements']);
   addContactAddresses(data['Contact']['elements'])
 

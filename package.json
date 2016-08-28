@@ -1,0 +1,25 @@
+{
+  "name": "paoloblower",
+  "version": "1.0.0",
+  "description": "Website for Paolo Blower, International Textile Workshop",
+  "main": "index.js",
+  "scripts": {
+    "build": "",
+    "concat": "node scripts/concat.js",
+    "minify": "node scripts/minify.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremiak/paoloblower.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeremiak/paoloblower/issues"
+  },
+  "homepage": "https://github.com/jeremiak/paoloblower#readme",
+  "devDependencies": {
+    "minify": "^2.0.11"
+  }
+}

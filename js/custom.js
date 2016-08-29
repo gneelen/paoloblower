@@ -164,12 +164,25 @@ function addItems(target, items) {
   });
 }
 
+function createSubmenu(target, items) {
+  var $menu = $('<ul class="sub-menu"></ul>');
+
+  items.forEach((function(item) {
+    var $el = $('<li><a href="#' + item.millidusedforphotos + '">' + item.name + '</a></li>')
+    $menu.append($el);
+  }));
+
+  $('#' + target).append($menu);
+}
+
 function addMills(mills) {
   addItems('mill-target', mills);
+  createSubmenu('mills-menu', mills);
 }
 
 function addAtelier(atelier) {
   addItems('atelier-target', atelier);
+  createSubmenu('atelier-menu', atelier);
 }
 
 function addTestimonial(testimonialData) {

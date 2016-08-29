@@ -1,3 +1,5 @@
+(function(window, document) {
+
 /* -- Full Screen Viewport Container
    ---------------------------- */
 
@@ -135,47 +137,39 @@ function addAboutParagraphs(paragraphs) {
   });
 }
 
+function createItem(id, name, location) {
+  var item = makeTemplateObject('mill-template');
+
+  item.attr('id', id);
+  item.find('.item-info h2').text(name);
+  item.find('.item-info p').text(location);
+  item.find('.item-picture').each(function(pictureIndex, el) {
+    var imgBaseUrl = 'img/mills/' + id;
+    var imgUrl = imgBaseUrl + '/' + (pictureIndex + 1) + '.jpg';
+    $(el).css('background-image', 'url(' + imgUrl + ')');
+  });
+
+  return item;
+}
+
+function addItems(target, items) {
+  var $target = $('#' + target);
+
+  items.forEach(function(data, aIndex) {
+    var name = data.name;
+    var location = data.location;
+    var item = createItem(data.millidusedforphotos, data.name, data.location);
+
+    $target.append(item);
+  });
+}
+
 function addMills(mills) {
-  createCarousel(mills, 'mill-template', 'mills');
+  addItems('mill-target', mills);
 }
 
 function addAtelier(atelier) {
-  console.log('atelier', atelier);
-  createCarousel(atelier, 'mill-template', 'atelier');
-}
-
-function createCarousel(data, templateId, target) {
-
-  console.log('#' + target + ' ol.carousel-indicators');
-  var carouselIndicators = $('#' + target + ' ol.carousel-indicators');
-
-  data.forEach(function(e, i) {
-    var mill = makeTemplateObject(templateId),
-        millId = data[i]['millidusedforphotos'],
-        carouselIndicator = document.createElement('li');
-
-    $(carouselIndicator).attr('data-target', '#carousel-example-generic');
-    $(carouselIndicator).attr('data-slide-to', i);
-
-    if (i == 0) {
-      $(carouselIndicator).addClass('active');
-      mill.addClass('active');
-    }
-
-    carouselIndicators.append(carouselIndicator);
-
-    var pictureElements = mill.find('.mill-picture');
-
-    pictureElements.each(function(pictureIndex, pictureElement) {
-      $(pictureElement).css('background-image', 'url(img/mills/' + millId + '/' + (pictureIndex + 1) + '.jpg)');
-    });
-
-    mill.find('h2').text(data[i]['name']);
-    mill.find('p').text(data[i]['location']);
-
-    $('#' + target + '-carousel').append(mill);
-  });
-
+  addItems('atelier-target', atelier);
 }
 
 function addTestimonial(testimonialData) {
@@ -261,3 +255,4 @@ $(window).scroll(function() {
       $('.nav li.current').removeClass('current');
   }
 });
+})(window, document);

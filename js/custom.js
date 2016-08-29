@@ -138,15 +138,14 @@ function addAboutParagraphs(paragraphs) {
 }
 
 function createItem(id, name, location) {
-  console.log('yo', id, name, location);
   var item = makeTemplateObject('mill-template');
 
+  item.attr('id', id);
   item.find('.item-info h2').text(name);
   item.find('.item-info p').text(location);
   item.find('.item-picture').each(function(pictureIndex, el) {
     var imgBaseUrl = 'img/mills/' + id;
     var imgUrl = imgBaseUrl + '/' + (pictureIndex + 1) + '.jpg';
-    console.log('imgUrl', imgUrl);
     $(el).css('background-image', 'url(' + imgUrl + ')');
   });
 
@@ -155,22 +154,17 @@ function createItem(id, name, location) {
 
 function addItems(target, items) {
   var $target = $('#' + target);
-  console.log(`add ${items.length} to ${target}`)
 
   items.forEach(function(data, aIndex) {
-    console.log('data', data);
     var name = data.name;
     var location = data.location;
     var item = createItem(data.millidusedforphotos, data.name, data.location);
-
-    console.log('item', item);
 
     $target.append(item);
   });
 }
 
 function addMills(mills) {
-  console.log('add mils', mills);
   addItems('mill-target', mills);
 }
 

@@ -43,9 +43,9 @@ section h2 {
 }
 
 section.cta {
-  background-image:url('../img/showroom.jpg');
+  background-image:url('../img/nyc-block.jpg');
   background-size:cover;
-  background-position-y:-200px;
+  background-position-y:55%;
   background-repeat:no-repeat;
 }
 
@@ -235,7 +235,10 @@ div#intro a {
 }
 
 .address {
+  background-color: rgba(0,0,0,0.8);
   text-align:right;
+  padding-bottom: 1.2em;
+  padding-top: 1.2em;
   padding-right:2em;
 }
 

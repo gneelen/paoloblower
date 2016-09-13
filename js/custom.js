@@ -132,8 +132,11 @@ function makeTemplateObject(templateId) {
 }
 
 function addAboutParagraphs(paragraphs) {
-  $('#about p').each(function(i, e) {
-    $(e).text(paragraphs[i]['text']);
+  console.log('paragraphs', paragraphs);
+  $('#history p').each(function(i, e) {
+    var text = paragraphs[i].text;
+    console.log('text', text);
+    $(e).text(text);
   });
 }
 
